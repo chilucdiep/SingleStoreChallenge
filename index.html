@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/18cea3e322.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="images/singlestore_logo_horizontal_color_on-black_rgb.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script defer src="script/script.js"></script>
+    <title>Single Store | Book a Demo</title>
+  </head>
+  <body class="index-body">
+    <header>
+      <nav class="navbar">
+        <img
+          src="images/singlestore_logo_horizontal_color_on-black_rgb.svg"
+          alt="logo"
+          class="logo-img"
+        />
+      </nav>
+    </header>
+
+    <main>
+      <section class="header">
+        <div class="header-icon">
+          <i class="fa-solid fa-calendar-days"></i>
+        </div>
+        <h2 class="header-h2">Book a Demo</h2>
+        <p class="p1">
+          Help us customize your demo by answering the following questions
+          below.
+        </p>
+      </section>
+
+      <section class="content">
+        <form action="" method="get" id="form">
+          <div class="form-field text-input">
+            <label for="email">Business Email</label>
+            <div class="input-box">
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Enter your business email"
+              />
+              <i class="validation-icon" id="email-validation-icon"></i>
+            </div>
+            <p class="annotation-error" id="error"></p>
+          </div>
+          <div class="form-field drop-down">
+            <label for="size">Business Size</label>
+            <div class="input-select">
+              <i class="fa-solid fa-angle-down"></i>
+              <select name="size" id="size">
+                <option value="small">1-10</option>
+                <option value="medium">11-50</option>
+                <option value="large">51-100</option>
+                <option value="xlarge">101-250</option>
+                <option value="xxlarge">250-1000</option>
+                <option value="xxxlarge">1000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field radio-inputs">
+            <label
+              >What is the most important thing to you in a solution?</label
+            >
+            <div class="radio-inputs-grid">
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="analytics"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="analytics">Real-time Analytics</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="scalability"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="scalability">Scalability</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="query"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="query">Query Response Time</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="storage"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="document">Document Storage</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="concurrency"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="concurrency">High Concurrency</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="search"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="search">Full Text Search</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="data"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="data">Data Ingest</label>
+              </div>
+              <div class="radio-input">
+                <input
+                  type="radio"
+                  id="price"
+                  name="importance-indicator"
+                />
+                <label class="p2" for="price">Price</label>
+              </div>
+            </div>
+          </div>
+          <div class="submit-section">
+            <button type="submit" class="submit-button">
+              Continue to Schedule a Time
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
