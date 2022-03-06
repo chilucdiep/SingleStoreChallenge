@@ -11,6 +11,11 @@
 4- Navbar
 
 5- Content (Form)
+    5.1 Layout
+    5.2 Text Field
+    5.3 Dropdown Field
+    5.4 Radio Buttons Field
+
 ------------------------- */
 
 /*------------------------- 
@@ -28,7 +33,6 @@
   --Purple-700: #c550ff;
   --Purple-200: #f9edff;
   --Red-900: #c41337;
-  /* --Gradient-Pu400-Pu800: linear-gradient(180deg, #aa00ff 0%, #00a3d7 100%); */
   --Green-900: #00873f;
   --Border-Radius: 4px;
 }
@@ -174,8 +178,10 @@ label {
 }
 
 /*------------------------- 
-    5- Content Form - Layout
+    5- Content (Form)
 ------------------------- */
+
+/*--------- 5.1- Layout --------- */
 .content {
   width: 400px;
 }
@@ -191,6 +197,8 @@ label {
   gap: 8px;
   margin-bottom: 40px;
 }
+
+/*--------- 5.2- Text Field --------- */
 
 .input-box {
   position: relative;
@@ -229,7 +237,6 @@ label {
 }
 
 .text-input input,
-.drop-down select,
 .selected {
   height: 32px;
   width: 100%;
@@ -241,18 +248,7 @@ label {
   font-size: 14px;
 }
 
-/* .input-select {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  cursor: pointer;
-} */
+/*--------- 5.3- Dropdown Field --------- */
 
 .drop-down {
   cursor: pointer;
@@ -289,7 +285,7 @@ select {
 }
 
 .option p {
-    line-height: 20px;
+  line-height: 20px;
 }
 
 .fa-solid.fa-angle-down {
@@ -302,6 +298,8 @@ select {
   font-size: 14px;
   color: var(--Neutral-700);
 }
+
+/*--------- 5.4- Radio Buttons Field --------- */
 
 .radio-inputs-grid {
   display: grid;

@@ -1,8 +1,6 @@
 const businessEmail = document.getElementById('email')
 const emailValidationIcon = document.getElementById('email-validation-icon')
 
-// let businessSize = selected.querySelector("p").innerHTML;
-
 const analyticsOption = document.getElementById('analytics')
 const storageOption = document.getElementById('storage')
 const searchOption = document.getElementById('search')
