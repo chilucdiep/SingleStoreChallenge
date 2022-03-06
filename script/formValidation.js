@@ -1,7 +1,7 @@
 const businessEmail = document.getElementById('email')
 const emailValidationIcon = document.getElementById('email-validation-icon')
 
-const businessSize = document.getElementById('size')
+// let businessSize = selected.querySelector("p").innerHTML;
 
 const analyticsOption = document.getElementById('analytics')
 const storageOption = document.getElementById('storage')
@@ -87,7 +87,7 @@ const removeErrorMessage = () => {
 
 const validateQualification = () => {
     if (errorMessage === "" || errorMessage === null) {
-        if (businessSize.value === "small" || storageOption.checked || searchOption.checked || priceOption.checked) {
+        if (businessSize === "1-10" || storageOption.checked || searchOption.checked || priceOption.checked) {
             window.location = "/unqualified.html";
         } else {
             window.location = "/qualified.html";

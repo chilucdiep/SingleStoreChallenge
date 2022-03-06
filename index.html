@@ -21,6 +21,7 @@
     />
     <link rel="stylesheet" href="styles/main.css" />
     <script defer src="script/formValidation.js"></script>
+    <script defer src="script/dropDown.js"></script>
     <title>Single Store | Book a Demo</title>
   </head>
 
@@ -63,20 +64,36 @@
           </div>
 
           <div class="form-field drop-down">
-            <label for="size">Business Size</label>
-            <div class="input-select">
-              <i class="fa-solid fa-angle-down"></i>
-              <select name="size" id="size">
-                <option value="small">1-10</option>
-                <option value="medium">11-50</option>
-                <option value="large">51-100</option>
-                <option value="xlarge">101-250</option>
-                <option value="xxlarge">250-1000</option>
-                <option value="xxxlarge">1000+</option>
-              </select>
+            <label>Business Size</label>
+            <div class="select-box">
+              <div class="selected" id="selected">
+                <p class="p2">Select Size</p>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="options-container" id="options-container">
+                <div class="option">
+                  <p class="p2">1-10</p>
+                </div>
+                <div class="option">
+                    <p class="p2">11-50</p>
+                  </div>
+                  <div class="option">
+                    <p class="p2">51-100</p>
+                  </div>
+                  <div class="option">
+                    <p class="p2">101-250</p>
+                  </div>
+                  <div class="option">
+                    <p class="p2">251-1000</p>
+                  </div>
+                  <div class="option">
+                    <p class="p2">1000+</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          
+
           <div class="form-field radio-inputs">
             <label
               >What is the most important thing to you in a solution?</label
