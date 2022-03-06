@@ -31,40 +31,8 @@ form.addEventListener("submit", (e) => {
     validateQualification();
 })
 
-const removeErrorMessage = () => {
-    errorMessage = ""
-    errorElement.remove()
-    businessEmail.classList.remove('error')
-}
-
-const addErrorMessage = () => {
-    console.log(errorElement)
-    errorElement.innerHTML = errorMessage;
-    errorElement.className = "annotation-error"
-    document.getElementById("text-input").appendChild(errorElement);
-}
-
-const addSuccess = () => {
-    removeErrorMessage();
-
-    businessEmail.className = "success"
-    emailValidationIcon.classList.add("fa-solid");
-    emailValidationIcon.classList.remove("fa-triangle-exclamation");
-    emailValidationIcon.classList.add("fa-circle-check");
-}
-
-const addError = () => {
-    addErrorMessage();
-
-    businessEmail.className = "error"
-    emailValidationIcon.classList.add("fa-solid");
-    emailValidationIcon.classList.remove("fa-circle-check");
-    emailValidationIcon.classList.add("fa-triangle-exclamation");
-}
-
-
-const validateEmail = (e) => {
-    const emailRegex = /@|./;
+const validateEmail = () => {
+    const emailRegex = /\S+@\S+\.\S+/;
     const personalEmailRegex = /gmail|hotmail|outlook|yahoo/;
 
     if (!emailRegex.test(businessEmail.value)) {
@@ -84,6 +52,37 @@ const validateEmail = (e) => {
     } else {
         addSuccess()
     }
+}
+
+const addError = () => {
+    addErrorMessage();
+
+    businessEmail.className = "error"
+    emailValidationIcon.classList.add("fa-solid");
+    emailValidationIcon.classList.remove("fa-circle-check");
+    emailValidationIcon.classList.add("fa-triangle-exclamation");
+}
+
+const addErrorMessage = () => {
+    console.log(errorElement)
+    errorElement.innerHTML = errorMessage;
+    errorElement.className = "annotation-error"
+    document.getElementById("text-input").appendChild(errorElement);
+}
+
+const addSuccess = () => {
+    removeErrorMessage();
+
+    businessEmail.className = "success"
+    emailValidationIcon.classList.add("fa-solid");
+    emailValidationIcon.classList.remove("fa-triangle-exclamation");
+    emailValidationIcon.classList.add("fa-circle-check");
+}
+
+const removeErrorMessage = () => {
+    errorMessage = ""
+    errorElement.remove()
+    businessEmail.classList.remove('error')
 }
 
 const validateQualification = () => {
