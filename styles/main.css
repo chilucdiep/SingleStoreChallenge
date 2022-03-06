@@ -150,7 +150,7 @@ label {
 .fa-calendar-days::before,
 .fa-calendar-check::before,
 .fa-calendar-xmark::before {
-  font-size: 64px;
+  font-size: 56px;
   background: -webkit-gradient(
     linear,
     left top,

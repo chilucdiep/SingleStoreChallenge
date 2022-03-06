@@ -1,6 +1,5 @@
 const businessEmail = document.getElementById('email')
 const emailValidationIcon = document.getElementById('email-validation-icon')
-const errorElement = document.getElementById('error')
 
 const businessSize = document.getElementById('size')
 
@@ -13,18 +12,60 @@ const form = document.getElementById('form')
 
 analyticsOption.checked = true;
 let errorMessage = "";
+const errorElement = document.createElement("p");
 
 businessEmail.addEventListener("click", () => {
-    errorMessage = "";
-    errorElement.innerText = errorMessage;
+    removeErrorMessage();
     emailValidationIcon.className = "validation-icon";
 })
 
+businessEmail.addEventListener("change", (e) => {
+    validateEmail(e);
+})
+
 form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    validateEmail(e);
+
+
+    validateQualification();
+})
+
+const removeErrorMessage = () => {
+    errorMessage = ""
+    errorElement.remove()
+    businessEmail.classList.remove('error')
+}
+
+const addErrorMessage = () => {
+    console.log(errorElement)
+    errorElement.innerHTML = errorMessage;
+    errorElement.className = "annotation-error"
+    document.getElementById("text-input").appendChild(errorElement);
+}
+
+const addSuccess = () => {
+    removeErrorMessage();
+
+    businessEmail.className = "success"
+    emailValidationIcon.classList.add("fa-solid");
+    emailValidationIcon.classList.remove("fa-triangle-exclamation");
+    emailValidationIcon.classList.add("fa-circle-check");
+}
+
+const addError = () => {
+    addErrorMessage();
+
+    businessEmail.className = "error"
+    emailValidationIcon.classList.add("fa-solid");
+    emailValidationIcon.classList.remove("fa-circle-check");
+    emailValidationIcon.classList.add("fa-triangle-exclamation");
+}
+
+
+const validateEmail = (e) => {
     const emailRegex = /@|./;
     const personalEmailRegex = /gmail|hotmail|outlook|yahoo/;
-
-    console.log(emailRegex.test(businessEmail.value));
 
     if (!emailRegex.test(businessEmail.value)) {
         errorMessage = "Please enter a valid emaild adress";
@@ -38,23 +79,14 @@ form.addEventListener("submit", (e) => {
         errorMessage = "Please make sure this isn't a personal email address";
     }
 
-    if (errorMessage.length > 0) {
-        e.preventDefault()
-        errorElement.innerText = errorMessage;
-        businessEmail.className = "error"
-        emailValidationIcon.classList.add("fa-solid");
-        emailValidationIcon.classList.remove("fa-circle-check");
-        emailValidationIcon.classList.add("fa-triangle-exclamation");
+    if (errorMessage !== "") {
+        addError()
     } else {
-        e.preventDefault()
-        errorMessage = "";
-        errorElement.innerText = errorMessage;
-        businessEmail.className = "success"
-        emailValidationIcon.classList.add("fa-solid");
-        emailValidationIcon.classList.remove("fa-triangle-exclamation");
-        emailValidationIcon.classList.add("fa-circle-check");
+        addSuccess()
     }
+}
 
+const validateQualification = () => {
     if (errorMessage === "" || errorMessage === null) {
         if (businessSize.value === "small" || storageOption.checked || searchOption.checked || priceOption.checked) {
             window.location = "/unqualified.html";
@@ -62,5 +94,4 @@ form.addEventListener("submit", (e) => {
             window.location = "/qualified.html";
         }
     }
-
-})
+}
