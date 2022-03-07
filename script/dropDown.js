@@ -1,4 +1,5 @@
 const selected = document.getElementById("selected")
+const selectedText = document.getElementById("selected-text")
 const optionsContainer = document.getElementById("options-container")
 const optionsList = document.querySelectorAll(".option");
 
@@ -10,8 +11,8 @@ selected.addEventListener("click", () => {
 
 optionsList.forEach(option => {
     option.addEventListener("click", () => {
-        selected.innerHTML = option.querySelector("p").innerHTML;
-        businessSize = selected.innerHTML;
+        selectedText.innerHTML = option.querySelector("p").innerHTML;
+        businessSize = selectedText.innerHTML;
         optionsContainer.classList.remove("active");
     });
 });

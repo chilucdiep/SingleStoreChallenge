@@ -124,7 +124,7 @@ label {
   background-color: var(--Neutral-900);
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 0 1.5em;
 }
 
 .logo-img {
@@ -137,10 +137,7 @@ label {
 ------------------------- */
 .header {
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 80px 0 24px;
+  margin: 5em auto 1.5em;
   width: 400px;
 }
 
@@ -151,13 +148,14 @@ label {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   border-radius: 50%;
 }
 
 .fa-calendar-days::before,
 .fa-calendar-check::before,
 .fa-calendar-xmark::before {
-  font-size: 56px;
+  font-size: 3.5rem;
   background: -webkit-gradient(
     linear,
     left top,
@@ -187,15 +185,15 @@ label {
 }
 
 .form-field {
-  margin-bottom: 24px;
+  margin-bottom: 1.5em;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 0.375em;
 }
 
 .form-field.radio-inputs {
-  gap: 8px;
-  margin-bottom: 40px;
+  gap: 0.5em;
+  margin-bottom: 2.5em;
 }
 
 /*--------- 5.2- Text Field --------- */
@@ -208,7 +206,7 @@ label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 8px;
+  right: 0.5em;
 }
 
 .fa-solid.fa-circle-check {
@@ -243,9 +241,9 @@ label {
   border: none;
   border-radius: var(--Border-Radius);
   background-color: var(--Neutral-200);
-  padding: 0 12px;
+  padding: 0 0.75em;
   color: var(--Neutral-900);
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 /*--------- 5.3- Dropdown Field --------- */
@@ -261,13 +259,13 @@ label {
 }
 
 .options-container {
-  box-shadow: 0 30px 30px rgba(0, 0, 0, 0.15), 0 20px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15), 0 5px 5px rgba(0, 0, 0, 0.1);
   background-color: var(--Neutral-White);
   border: var(--Neutral-300) 1px solid;
   position: absolute;
   width: 400px;
-  margin-top: 4px;
-  padding: 6px 0;
+  margin-top: 0.25em;
+  padding: 0.375em 0;
   border-radius: var(--Border-Radius);
   display: none;
 }
@@ -277,7 +275,7 @@ label {
 }
 
 .option {
-  padding: 6px 16px;
+  padding: 0.375em 1em;
 }
 
 .option:hover {
@@ -290,12 +288,12 @@ label {
 
 .fa-solid.fa-angle-down {
   position: absolute;
-  right: 8px;
+  right: 0.5em;
   pointer-events: none;
 }
 
 .fa-angle-down::before {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: var(--Neutral-700);
 }
 
@@ -307,7 +305,7 @@ label {
 }
 
 .radio-input {
-  margin-bottom: 8px;
+  margin-bottom: 0.5em;
 }
 
 .radio-input input {
@@ -332,7 +330,7 @@ label {
   height: 16px;
   border: var(--Neutral-700) solid 1px;
   border-radius: 50%;
-  margin-right: 8px;
+  margin-right: 0.5em;
 }
 
 .submit-section {
@@ -341,10 +339,10 @@ label {
 
 .submit-button {
   border: none;
-  padding: 10px 16px;
+  padding: 0.625em 1em;
   color: var(--Neutral-White);
   border-radius: var(--Border-Radius);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
