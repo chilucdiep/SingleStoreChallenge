@@ -62,7 +62,6 @@ const addError = () => {
 }
 
 const addErrorMessage = () => {
-    console.log(errorElement)
     errorElement.innerHTML = errorMessage;
     errorElement.className = "annotation-error"
     document.getElementById("text-input").appendChild(errorElement);
@@ -84,11 +83,15 @@ const removeErrorMessage = () => {
 }
 
 const validateQualification = () => {
-    if (errorMessage === "" || errorMessage === null) {
-        if (businessSize === "1-10" || storageOption.checked || searchOption.checked || priceOption.checked) {
-            window.location = "/unqualified.html";
-        } else {
-            window.location = "/qualified.html";
-        }
+    if (errorMessage !== "" && errorMessage !== null) {
+        return;
     }
+
+    const isUnqualified = businessSize === "1-10" || storageOption.checked || searchOption.checked || priceOption.checked;
+
+    if (isUnqualified) {
+        return window.location = "/unqualified.html";
+    }
+
+    window.location = "/qualified.html";
 }

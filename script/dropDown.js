@@ -15,3 +15,9 @@ optionsList.forEach(option => {
         optionsContainer.classList.remove("active");
     });
 });
+
+document.addEventListener("click", (e) => {
+    if (!e.target.matches(".selected") && !e.target.matches('.option')) {
+        optionsContainer.classList.remove("active");
+    }
+})
