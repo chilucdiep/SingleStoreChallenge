@@ -1,6 +1,6 @@
 # Technical Challenge
 <br />
-### <div align="center"><img src="https://github.com/chilucdiep/SingleStoreChallenge/blob/main/images/ezgif.com-gif-maker%20(1).gif" width="100%"></div>
+<div align="center"><img src="https://github.com/chilucdiep/SingleStoreChallenge/blob/main/images/ezgif.com-gif-maker%20(1).gif" width="100%"></div>
 
 # About
 
