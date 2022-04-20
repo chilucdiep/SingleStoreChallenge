@@ -33,7 +33,7 @@ All components (dropdown, button, etc.) are be built exactly according to the de
 - Once the form is valid, clicking the submit button will transition the user to one of two possible pages. This decision is based on checking to see if the user selected one of the following options:
   * business size -> 1-10
   * importance indicator -> DocumentStorage, FullTextSearch, Price  
-&nbsp;&nbsp; If the user selected any of the above options in either of the second or third fields, then that user is "unqualified" and is shown the unqualified lead page. If the user is not unqualified, then they are shown the qualified lead page.
+If the user selected any of the above options in either of the second or third fields, then that user is "unqualified" and is shown the unqualified lead page. If the user is not unqualified, then they are shown the qualified lead page.
 
 
 ## <a name="code"></a>Cool Things About the Code
