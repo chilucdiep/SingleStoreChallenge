@@ -32,7 +32,7 @@ All components (dropdown, button, etc.) are be built exactly according to the de
 - When the user clicks the submit button, the form checks for validity. If the user has made any errors while filling out the form, an appropriate error shows under the incorrect fields and the user is be required to fix the errors before continuing.
 - Once the form is valid, clicking the submit button will transition the user to one of two possible pages. This decision is based on checking to see if the user selected one of the following options:
   * business size -> 1-10
-  * importance indicator -> DocumentStorage, FullTextSearch, Price__
+  * importance indicator -> DocumentStorage, FullTextSearch, Price  
 &nbsp;&nbsp; If the user selected any of the above options in either of the second or third fields, then that user is "unqualified" and is shown the unqualified lead page. If the user is not unqualified, then they are shown the qualified lead page.
 
 
